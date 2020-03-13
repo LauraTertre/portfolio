@@ -1,0 +1,211 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Header - Mise en forme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html {
+    font-size: 62.5%;
+}
+.container {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .bloc:first-child {
+    width: 5vh;
+    height: 5vh;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+header .bloc:last-child {
+    width: 10vh;
+    height: 5vh;
+    background-color: rgb(137, 160, 95);
+}
+header .bloc:first-child span {
+    width: 100%;
+    height: 1vh;
+    background-color: rgb(22, 22, 22);
+    border-radius: 20%;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Progress Bar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.progressBar {
+    width: 100%;
+    background-color: grey;
+}
+.myBar {
+    width: 1%;
+    height: 2vh;
+    background-color: rgb(22, 22, 22);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            General
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+h2 {
+    font-size: 3vh;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+h3 {
+    font-size: 2vh;
+    font-weight: bold;
+}
+.localisation {
+    font-size: 2vh;
+    font-style: italic;
+}
+.description {
+    font-size: 2vh;
+    display: block;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Accueil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Accueil - Mise en forme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#accueil img {
+    /* width: 50vw; */
+    border-radius: 50%;
+}
+#accueil {
+    text-align: center;
+}
+#accueil div {
+    margin: 2vh 0;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Formations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Formations - Mise en forme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* .moreInformations {
+    width: 50px;
+    height: 10px;
+    background-color: rgb(22, 22, 22);
+} */
+/* .moreInformations::after {
+    content: "";
+    transform: rotateX(90deg);
+} */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.project-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.project-block {
+    position: relative;
+    width: 100vw;
+    height: 30rem;
+    background-color: rgba(22, 22, 22, 0.055);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-block img {
+    width: 70vw;
+    margin: 2vh;
+}
+.project-hover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgba(22, 22, 22, 0.055);
+}
+.project-block:hover .project-hover {
+    animation-name: animation-project-hover;
+    animation-duration: 0.5s;
+    height: 100%;
+}
+@keyframes animation-project-hover {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Projects - Mise en forme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Footer - Mise en forme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: bisque;
+}
+footer .headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .headerNav a:hover {
+    filter: brightness(2.5);
+}
+footer .headerNav a:hover p {
+    display: block;
+}
+footer .headerNav .logo-background {
+    width: 3rem;
+    height: 3rem;
+    background-size: cover;
+    filter: invert(8%) sepia(20%) saturate(22%) hue-rotate(315deg) brightness(99%) contrast(91%);
+}
+footer .headerNav a:first-child .logo-background {
+    background-image: url("../images/icons/icons_me.png");
+}
+footer .headerNav a:nth-child(2) .logo-background {
+    background-image: url("../images/icons/icons_formations.png");
+}
+footer .headerNav a:nth-child(3) .logo-background {
+    background-image: url("../images/icons/icons_experiences.png");
+}
+footer .headerNav a:nth-child(4) .logo-background {
+    background-image: url("../images/icons/icons_projects.png");
+}
+footer .headerNav a:nth-child(5) .logo-background {
+    background-image: url("../images/icons/icons_skills.png");
+}
+footer .headerNav a:last-child .logo-background {
+    background-image: url("../images/icons/icons_contact.png");
+}
+footer .headerNav a:hover .logo-background {
+    display: none;
+}
+footer .headerNav p {
+    display: none;
+    font-size: 1rem;
+}
