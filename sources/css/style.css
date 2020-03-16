@@ -22,7 +22,7 @@ header {
 header .bloc:first-child {
     width: 5vh;
     height: 5vh;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -31,7 +31,7 @@ header .bloc:first-child {
 header .bloc:last-child {
     width: 10vh;
     height: 5vh;
-    background-color: rgb(137, 160, 95);
+    /* background-color: rgb(137, 160, 95); */
 }
 header .bloc:first-child span {
     width: 100%;
@@ -94,33 +94,21 @@ h3 {
     margin: 2vh 0;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                            Formations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Formations - Mise en forme
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-/* .moreInformations {
-    width: 50px;
-    height: 10px;
-    background-color: rgb(22, 22, 22);
-} */
-/* .moreInformations::after {
-    content: "";
-    transform: rotateX(90deg);
-} */
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .project-content {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    /* flex-wrap: nowrap; */
+    flex-direction: column;
     align-items: center;
 }
 .project-block {
     position: relative;
-    width: 100vw;
-    height: 30rem;
+    width: 80vw;
+    height: 35rem;
+    margin: 2vh;
+    padding: 2vh;
     background-color: rgba(22, 22, 22, 0.055);
     display: flex;
     flex-direction: column;
@@ -135,12 +123,22 @@ h3 {
     bottom: 0;
     width: 100%;
     /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
     background-color: rgba(22, 22, 22, 0.055);
 }
 .project-block:hover .project-hover {
     animation-name: animation-project-hover;
     animation-duration: 0.5s;
     height: 100%;
+}
+.project-hover span {
+    display: none;
+}
+.project-hover:hover span {
+    display: block;
 }
 @keyframes animation-project-hover {
     from {
@@ -149,6 +147,79 @@ h3 {
     to {
         height: 100%;
     }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Projects - More
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.project-content-more {
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* bottom: 0; */
+    left: 0;
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: rgb(230, 230, 230);
+}
+.project-content-more.open {
+    animation-name: animationProjectContentMore;
+    animation-duration: 1.5s;
+    transform: translateX(0%);
+}
+/* .project-content-more.off {
+    animation-name: animationProjectContentMore;
+    animation-duration: 1.5s;
+    animation-direction: reverse;
+    transform: translateX(0%);
+} */
+@keyframes animationProjectContentMore {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+
+    }
+}
+.project-block-more {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vw;
+}
+.project-block-more.open {
+    display: flex;
+}
+/* .project-block-more.off {
+    display: flex;
+} */
+.project-content-more .buttonOff {
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    cursor: pointer;
+    font-weight: 900;
+    padding: 1vh;
+}
+.project-block-more img {
+    width: 80vw;
+    margin: 2vh;
+}
+.hashtag li {
+    display: inline-block;
+    margin: 2vw;
+    padding: 1vh;
+    background-color: rgb(22, 22, 22);
+    color: rgb(230, 230, 230);
+}
+.project-block-more button.seeSite {
+    text-align: center;
+    margin: 2vh;
+    padding: 2vh 10vw;
+    background-color: rgba(22, 22, 22, 0.644);
+    color: rgb(230, 230, 230);
+    cursor: pointer;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Projects - Mise en forme
