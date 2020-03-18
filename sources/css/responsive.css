@@ -13,6 +13,9 @@
     }
 }
 @media (max-width: 937px) {
+    header {
+        height: 10vh;
+    }
     .project-block {
         width: 30rem;
     }
