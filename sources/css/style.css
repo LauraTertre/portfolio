@@ -43,6 +43,9 @@ header .bloc:first-child span {
     background-color: rgb(22, 22, 22);
     border-radius: 20%;
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Header - Social Media
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 header .social-media {
     display: flex;
     justify-content: space-between;
