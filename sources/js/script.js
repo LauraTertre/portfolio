@@ -33,6 +33,7 @@ buttonOff.forEach((buttonOffChoice)=> {
     buttonOffChoice.addEventListener('click', () => {
         projectBlockMore.forEach((content)=> {
             content.classList.remove('open')
+            projectContentMore.classList.remove('open')
         })
 })
 })
