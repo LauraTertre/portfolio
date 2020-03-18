@@ -6,9 +6,29 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media screen and (min-width: 500px) {
     .project-block {
-        height: 45rem;
+        /* height: 45rem; */
     }
     .project-block img, .project-block-more img {
-        width: 500px;
+        /* width: 500px; */
+    }
+}
+@media (max-width: 937px) {
+    .project-block {
+        width: 30rem;
+    }
+}
+@media (max-width: 645px) {
+    .project-block {
+        width: 25rem;
+    }
+}
+@media (max-width: 565px) {
+    .project-block {
+        width: 35rem;
+    }
+}
+@media (max-width: 375px) {
+    .project-content-more {
+        width: 100%;
     }
 }
