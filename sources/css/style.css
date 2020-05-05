@@ -125,7 +125,6 @@ h3 {
         Accueil - Mise en forme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #accueil img {
-    /* width: 50vw; */
     border-radius: 50%;
 }
 #accueil {
@@ -135,6 +134,15 @@ h3 {
 }
 #accueil div {
     margin: 2vh 0;
+}
+#accueil .cv {
+    margin: 5rem;
+}
+#accueil .cv .title{
+    margin-top: 4vh;
+    padding: 4rem 5rem;
+    background-color: rgba(22, 22, 22, 0.055);
+    cursor: pointer;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             Projects
