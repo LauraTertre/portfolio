@@ -185,7 +185,7 @@ button.seeSite {
     padding: 4rem;
     border-radius: 50px;
     background-color: rgba(22, 22, 22, 0.055);
-    box-shadow: 7px 7px 2px 1px rgba(16, 16, 17, 0.2);
+    box-shadow: 3px 3px 2px 1px rgba(16, 16, 17, 0.2);
 }
 #formations .formation .description {
     width: 100%;
@@ -228,6 +228,7 @@ button.seeSite {
     padding: 2vh;
     border-radius: 10px;
     background-color: rgba(22, 22, 22, 0.055);
+    box-shadow: 3px 3px 2px 1px rgba(16, 16, 17, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +281,7 @@ button.seeSite {
     top: 0;
     right: 0;
     background-color: rgb(230, 230, 230);
+    box-shadow: -3px 3px 2px 1px rgba(16, 16, 17, 0.2);
 }
 .project-content-more.open {
     width: 40rem;
