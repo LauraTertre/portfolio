@@ -140,8 +140,9 @@ button.seeSite {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Accueil - Mise en forme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#accueil img {
-    border-radius: 50%;
+#accueil video {
+    border-radius: 10px;
+    width: 80vw;
 }
 #accueil {
     width: 80%;
