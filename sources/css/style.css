@@ -8,7 +8,6 @@ html {
     font-size: 62.5%;
 }
 .container {
-    /* font-size: 1.6rem; */
     font-size: 1.6em;
     line-height: 1.5;
     overflow: hidden;
@@ -25,17 +24,18 @@ header .bloc:first-child {
     width: 3rem;
     height: 5vh;
     margin-left: 2vw;
-    /* background-color: cadetblue; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
 header .bloc:last-child {
-    width: 20vw;
+    width: 11rem;
     height: 100%;
     margin-right: 2vw;
-    /* background-color: rgb(137, 160, 95); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 header .bloc:first-child span {
     width: 100%;
@@ -95,21 +95,23 @@ header .social-media-logo a:hover:last-child {
     margin: auto;
     margin-top: 5vh;
     margin-bottom: 10vh;
-    /* overflow: hidden; */
 }
 h2 {
-    /* font-size: 3vh; */
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 2vh;
 }
 h3 {
-    font-size: 2vh;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+}
+.infouseful {
+    font-size: 2rem;
+    font-style: bold italic;
 }
 .localisation {
-    font-size: 2vh;
+    font-size: 2rem;
     font-size: 1.5rem;
     font-style: italic;
 }
@@ -117,6 +119,20 @@ h3 {
     font-size: 2vh;
     font-size: 1.5rem;
     display: block;
+    margin: 2rem 0;
+}
+button {
+    text-align: center;
+    margin-top: 2vh;
+    padding: 1.5vh 5vw;
+    border-radius: 100px;
+    background-color: rgba(22, 22, 22, 0.644);
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+button.seeSite {
+    margin-top: 2vh;
+    padding: 2vh 5vw;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             Accueil
@@ -139,10 +155,54 @@ h3 {
     margin: 5rem;
 }
 #accueil .cv .title{
-    margin-top: 4vh;
+    margin: 4vh 0;
     padding: 4rem 5rem;
     background-color: rgba(22, 22, 22, 0.055);
+    border-radius: 10px;
     cursor: pointer;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Formations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#formations h2 {
+    margin-left: 10vw;
+}
+#formations .formations-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.formation-content-block {
+    margin: 2rem 0;
+}
+#formations .formation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50rem;
+    margin: 0 2rem;
+    padding: 4rem;
+    border-radius: 50px;
+    background-color: rgba(22, 22, 22, 0.055);
+    box-shadow: 7px 7px 2px 1px rgba(16, 16, 17, 0.2);
+}
+#formations .formation .description {
+    width: 100%;
+}
+#formations li::before {content: "•"; color: rgb(37, 33, 33);
+    display: inline-block;
+    width: 1em;
+}
+#formations .formation.seeMore {
+    display: none;
+}
+#formations .formation.seeMore.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formation-content-bloc {
+    margin: 100px;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             Projects
@@ -150,20 +210,22 @@ h3 {
 #projects h2 {
     margin-left: 10vw;
 }
+#projects ul {
+    margin: 0.5rem 0 1rem 0;
+}
 .project-content {
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     align-items: flex-start;
 }
 .project-block {
     position: relative;
     width: 30%;
-    /* height: 25rem; */
     margin: 2vh;
     padding: 2vh;
+    border-radius: 10px;
     background-color: rgba(22, 22, 22, 0.055);
     display: flex;
     flex-direction: column;
@@ -181,10 +243,10 @@ h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* height: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
     font-size: 8rem;
     background-color: rgba(22, 22, 22, 0.055);
     cursor: pointer;
@@ -219,7 +281,7 @@ h3 {
     background-color: rgb(230, 230, 230);
 }
 .project-content-more.open {
-    width: 35rem;
+    width: 40rem;
     height: 100%;
     animation-name: animationProjectContentMore;
     animation-duration: 1.5s;
@@ -241,6 +303,7 @@ h3 {
     }
 }
 .project-block-more {
+    text-align: center;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -249,35 +312,39 @@ h3 {
 .project-block-more.open {
     display: flex;
 }
-/* .project-block-more.off {
-    display: flex;
-} */
 .project-content-more .buttonOff {
     position: absolute;
-    top: 1vh;
-    left: 1vh;
+    top: 2rem;
+    left: 2rem;
     cursor: pointer;
+    font-size: 1.4rem;
     font-weight: 900;
-    padding: 1vh;
+    padding: 1rem;
 }
 .project-block-more img {
     width: 20rem;
     margin: 2vh;
 }
+.project-block-more .description {
+    text-align: left;
+}
+.project-block-more .description li::before {
+    content: "•";
+    color: rgb(37, 33, 33);
+    display: inline-block;
+    width: 1em;
+}
 .hashtag li {
     display: inline-block;
     margin: 1rem;
     padding: 1vh;
+    border-radius: 10px;
     background-color: rgb(22, 22, 22);
     color: rgb(230, 230, 230);
 }
-.project-block-more button.seeSite {
-    text-align: center;
-    margin-top: 2vh;
-    padding: 2vh 5vw;
-    background-color: rgba(22, 22, 22, 0.644);
+.hashtag li::before {
+    content: "#";
     color: rgb(230, 230, 230);
-    cursor: pointer;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Projects - Mise en forme
@@ -291,15 +358,28 @@ h3 {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 footer {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     bottom: 0;
     width: 100%;
-    height: 8vh;
+    height: 6rem;
     background-color: rgb(212, 212, 212);
 }
 footer .headerNav {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+footer .headerNav a {
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 footer .headerNav a:hover {
     filter: brightness(2.5);

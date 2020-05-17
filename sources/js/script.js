@@ -8,6 +8,28 @@ function myFunction() {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            Formations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Formations - More information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+const buttonSeeMore = document.querySelectorAll("button.seeMore")
+const formationSeeMore = document.querySelectorAll(".formation.seeMore")
+
+
+buttonSeeMore.forEach((choice1, index1)=> {
+    choice1.addEventListener('click', () => {
+        if (formationSeeMore[index1].classList.contains('open')) {
+            console.log(formationSeeMore[index1].classList);
+            formationSeeMore[index1].classList.remove('open')
+        }
+        else {
+            formationSeeMore[index1].classList.add('open')
+        }
+    })
+})
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

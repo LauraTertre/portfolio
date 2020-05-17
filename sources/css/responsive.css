@@ -21,6 +21,10 @@
     .project-block {
         width: 25rem;
     }
+    #formations .formation {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 565px) {
     .project-block {
@@ -28,7 +32,10 @@
     }
 }
 @media (max-width: 375px) {
-    .project-content-more {
-        width: 100%;
+    #accueil .cv .title {
+        font-size: 1.5rem;
+    }
+    .project-content-more.open {
+        width: 100vw;
     }
 }
