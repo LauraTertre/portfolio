@@ -4,34 +4,29 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media screen and (min-width: 500px) {
+@media (max-width: 1200px) {
     .project-block {
-        /* height: 45rem; */
-    }
-    .project-block img, .project-block-more img {
-        /* width: 500px; */
+        width: 45rem;
     }
 }
-@media (max-width: 937px) {
+@media (max-width: 960px) {
+    #accueil video {
+        width: 70vw;
+    }
     .project-block {
-        width: 30rem;
+        width: 35rem;
     }
 }
 @media (max-width: 645px) {
-    .project-block {
-        width: 25rem;
-    }
     #formations .formation {
         width: 80%;
         margin: 0 auto;
     }
 }
-@media (max-width: 565px) {
-    .project-block {
-        width: 35rem;
-    }
-}
 @media (max-width: 375px) {
+    .project-block {
+        width: 80vw;
+    }
     #accueil .cv .title {
         font-size: 1.5rem;
     }
